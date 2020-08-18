@@ -3,16 +3,80 @@
 */
 
 #cabecalho {
-	width: 100%;
-	float: left;
 	background-color: var(--cor-roxa40);
-}
-
-#cabalho .banner , h1{
-	float: left;
+	display: flex;
+	justify-content: center;
 }
 
 #cabecalho .banner h1 {
-	color: white;
+	background-color: var(--cor-roxa90);
+	color: var(--cor-roxa40);
+	border-radius: 5px;
+	padding: 0px 10px;
+}
+
+#corpo {
+	background-color: var(--cor-roxa90);
+	color: var(--cor-roxa5);
+}
+
+#corpo #busca-repositorio, #corpo #busca-repositorio .conjunto, #corpo .requisicoes, .requisicoes .requisicao {
+	display: flex;
+	flex-direction: column;
+}
+
+#corpo #busca-repositorio .conjunto i {
+	margin: 0px 5px;
+}
+
+#corpo #busca-repositorio .conjunto-busca {
+	margin: 15px 0px;
+	display: block;
+}
+
+#corpo #busca-repositorio .conjunto-busca input, #corpo #busca-repositorio .conjunto-busca button {
+	width: 100%;
+}
+
+#corpo #busca-repositorio .conjunto-busca input {
+	border-radius: 5px 5px 0px 0px;
+}
+
+#corpo #busca-repositorio .conjunto-busca button {
+	border-radius: 0px 0px 5px 5px;
+}
+
+.requisicoes .requisicao {
+	box-shadow: 0px 0px 5px var(--cor-roxa5);
 	background-color: white;
+	margin-bottom: 10px;
+	padding: 5px;
+	border-top: solid 4px var(--cor-roxa5);
+}
+
+.requisicao .imagem {
+	width: 100%;
+	border-radius: 5px;
+}
+
+.requisicao .link-acesso {
+	background-color: var(--cor-roxa5);
+	color: var(--cor-roxa90);
+	padding: 5px 10px;
+	align-self: flex-end;
+}
+
+#rodape {
+	background-color: var(--cor-roxa40);
+	color: var(--cor-roxa90);
+}
+
+#rodape a {
+	color: var(--cor-roxa90);
+	font-weight: 500;
+	line-height: 0;
+}
+
+#rodape a:hover {
+	text-decoration: underline;
 }
