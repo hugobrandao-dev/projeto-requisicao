@@ -8,6 +8,7 @@
 	font: normal 100% 'Baloo Tamma 2', cursive;
 	box-sizing: border-box;
 	list-style: none;
+	text-decoration: none;
 }
 
 :root {
@@ -53,4 +54,8 @@ h2 {
 
 h1 {
 	font-size: 2.2em;
+}
+
+.espacar {
+	padding: 15px 30px;
 }
