@@ -66,6 +66,10 @@
 	align-self: flex-end;
 }
 
+.requisicao .link-acesso i {
+	margin-left: 5px;
+}
+
 #rodape {
 	background-color: var(--cor-roxa40);
 	color: var(--cor-roxa90);
@@ -79,4 +83,39 @@
 
 #rodape a:hover {
 	text-decoration: underline;
+}
+
+@media screen and (min-width: 600px) {
+	#cabecalho {
+		justify-content: flex-start;
+	}
+
+	#corpo #busca-repositorio .conjunto-busca {
+		display: flex;
+		justify-content: flex-start;
+	}
+
+	#corpo #busca-repositorio .conjunto-busca button, #corpo #busca-repositorio .conjunto-busca input {
+		width: auto;
+		margin: 0;
+	}
+
+	#corpo #busca-repositorio .conjunto-busca button {
+		border-radius: 0px 5px 5px 0px;
+	}
+
+	#corpo #busca-repositorio .conjunto-busca input {
+		border-radius: 5px 0px 0px 5px;
+	}
+
+	#corpo .requisicoes {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	#corpo .requisicoes .requisicao {
+		width: 49%;
+	}
 }
