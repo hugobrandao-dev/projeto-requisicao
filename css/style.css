@@ -2,3 +2,17 @@
  * Arquivo de estilo principal do projeto
 */
 
+#cabecalho {
+	width: 100%;
+	float: left;
+	background-color: var(--cor-roxa40);
+}
+
+#cabalho .banner , h1{
+	float: left;
+}
+
+#cabecalho .banner h1 {
+	color: white;
+	background-color: white;
+}
