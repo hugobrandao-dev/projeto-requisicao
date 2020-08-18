@@ -40,6 +40,7 @@
 
 #corpo #busca-repositorio .conjunto-busca input {
 	border-radius: 5px 5px 0px 0px;
+	border-bottom: none;
 }
 
 #corpo #busca-repositorio .conjunto-busca button {
@@ -73,6 +74,9 @@
 #rodape {
 	background-color: var(--cor-roxa40);
 	color: var(--cor-roxa90);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 #rodape a {
@@ -106,16 +110,19 @@
 
 	#corpo #busca-repositorio .conjunto-busca input {
 		border-radius: 5px 0px 0px 5px;
+		border: solid 2px var(--cor-roxa40);
+		border-right: none;
 	}
 
 	#corpo .requisicoes {
 		display: flex;
 		flex-direction: row;
-		justify-content: space-between;
+		justify-content: flex-start;
 		flex-wrap: wrap;
 	}
 
 	#corpo .requisicoes .requisicao {
-		width: 49%;
+		width: 295px;
+		margin-right: 7px;
 	}
 }
