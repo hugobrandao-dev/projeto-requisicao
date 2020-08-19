@@ -25,13 +25,13 @@
 		<p>Você pode fazer uma requisição, seja de um usuário ou um repositório, preenchendo o formulário abaixo.</p>
 		<form id="busca-repositorio">
 			<div class="conjunto">
-				<label><input type="radio" name="rd-requisicao" checked><i class="fas fa-user"></i>Usuário</label>
-				<label><input type="radio" name="rd-requisicao"><i class="fas fa-project-diagram"></i>Repositório</label>
+				<label><input type="radio" name="rd-requisicao" value="users" checked><i class="fas fa-user"></i>Usuário</label>
+				<label><input type="radio" name="rd-requisicao" value="repos"><i class="fas fa-project-diagram"></i>Repositório</label>
 			</div>
 			<div class="conjunto">
 				<div class="conjunto-busca">
 					<label>Nome ou caminho: <input type="text" placeholder="Informe o nome/caminho" name="nome" autofocus></label>
-					<button id="btn-buscar"><i class="fas fa-search"></i> Buscar</button>
+					<button type="submit" id="btn-buscar"><i class="fas fa-search"></i> Buscar</button>
 				</div>
 			</div>
 		</form>
