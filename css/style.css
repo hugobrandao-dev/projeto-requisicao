@@ -20,7 +20,7 @@
 	color: var(--cor-roxa5);
 }
 
-#corpo #busca-repositorio, #corpo #busca-repositorio .conjunto, #corpo .requisicoes, .requisicoes .requisicao {
+#corpo, #corpo #busca-repositorio, #corpo #busca-repositorio .conjunto, #corpo .requisicoes, .requisicoes .requisicao {
 	display: flex;
 	flex-direction: column;
 }
@@ -45,6 +45,10 @@
 
 #corpo #busca-repositorio .conjunto-busca button {
 	border-radius: 0px 0px 5px 5px;
+}
+
+#corpo #uso {
+	font-size: 0.6em;
 }
 
 .requisicoes .requisicao {
