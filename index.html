@@ -22,7 +22,7 @@
 		</a>
 	</header>
 	<main id="corpo" class="espacar">
-		<p>Você pode fazer uma requisição, seja de um usuário ou um repositório, preenchendo o formulário abaixo.</p>
+		<p>Você pode fazer uma requisição, seja de um usuário ou um repositório, preenchendo o formulário abaixo. <span class=""><i class="fas fa-question-circle"></i></span></p>
 		<form id="busca-repositorio">
 			<div class="conjunto">
 				<label><input type="radio" name="rd-requisicao" value="users" checked><i class="fas fa-user"></i>Usuário</label>
@@ -30,11 +30,15 @@
 			</div>
 			<div class="conjunto">
 				<div class="conjunto-busca">
-					<label>Nome ou caminho: <input type="text" placeholder="Informe o nome/caminho" name="nome" autofocus></label>
+					<label>Nome ou caminho*: <input type="text" placeholder="Informe o nome/caminho" name="nome" autofocus></label>
 					<button type="submit" id="btn-buscar"><i class="fas fa-search"></i> Buscar</button>
 				</div>
 			</div>
 		</form>
+		<p>
+			*Para busca de usuário: [NOME DO USUÁRIO] <br>
+			*Para busca de repositório: [NOME DO USUÁRIO/ORGANIZAÇÃO]/[NOME DO REPOSITÓRIO]
+		</p>
 		<section class="requisicoes">
 			<!-- <article class="requisicao">
 				<p>Usuário:</p><h4 class="tipo">Hugo da Rocha Brandão</h4>
