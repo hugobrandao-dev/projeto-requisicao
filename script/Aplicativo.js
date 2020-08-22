@@ -6,10 +6,14 @@ class Aplicativo {
 		this.iniciadorEventos()
 	}
 
+	// Inicia todos os eventos necessários já no carregamento da página
 	iniciadorEventos() {
+
+		// Evento submit do formulário de busca por usuário/repositório.
 		this.formElement_busca.onsubmit = event => this.verificarRequisicao(event)
 	}
 
+	// Impede a execução regular do submit e verifica que o input do nome está vazio.
 	verificarRequisicao(event) {
 		event.preventDefault()
 
@@ -22,6 +26,7 @@ class Aplicativo {
 		}
 	}
 
+	// Faz a busca pelo usuário ou repositório informado no input.
 	buscarRepositorio(tipo) {
 		let inputElement_nome = document.getElementsByName('nome')[0]
 		let nome = inputElement_nome.value
@@ -31,6 +36,13 @@ class Aplicativo {
 		} else {
 			requisitorBase.get(`${tipo}/${nome}`)
 				.then(response => {
+
+					/*
+					Verifica o tipo de requisição que está 
+					selecionado (checked) e armazena as 
+					informações necessários dependendo do tipo da 
+					mesma.
+					*/
 					if (tipo === 'users') {
 						var { name, avatar_url, html_url, bio, type } = response.data
 						this.renderizarRequisicao(name, avatar_url, html_url, type, bio)
@@ -40,13 +52,18 @@ class Aplicativo {
 						this.renderizarRequisicao(name, avatar_url, html_url, type, description)
 					}
 				})
+
+				// Caso não ache nenhum repositório ou usuário, executa o código abaixo.
 				.catch(error => {
 					alert('OPS: Não encontramos nenhum usuário ou repositório com esse nome/caminho.')
 					console.log(error)
 				})
 		}
 	}
-	// name, avatar_url, html_url, type, bio
+	/*
+	Realiza a construção de um elemento HTML, já com as propriedades 
+	necessários para a estilização com CSS.
+	*/
 	renderizarRequisicao(nome, foto, acessar, tipo, descricao) {
 		let $pElement_tipo = document.createElement('p')
 		$pElement_tipo.innerHTML = tipo
