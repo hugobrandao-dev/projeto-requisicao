@@ -36,7 +36,7 @@ class Aplicativo {
 		} else {
 			requisitorBase.get(`${tipo}/${nome}`)
 				.then(response => {
-
+					inputElement_nome.value = ''
 					/*
 					Verifica o tipo de requisição que está 
 					selecionado (checked) e armazena as 
